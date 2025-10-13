@@ -1,0 +1,24 @@
+engine:
+  mode: paper
+  universe: sp500
+  rebalance: daily
+  max_positions: 40
+  capital: 1_000_000
+  session_start: "09:30"
+  session_end: "16:00"
+  timezone: America/New_York
+
+data:
+  provider: polygon
+  cache_ttl: 300
+  bar_size: 1m
+  lookback_days: 5
+
+broker:
+  primary: alpaca
+  fallback: ibkr
+
+logging:
+  level: INFO
+  format: json
+  file: logs/sherwood.log
