@@ -1,0 +1,20 @@
+limits:
+  max_position_pct: 0.05
+  max_sector_pct: 0.25
+  max_gross_leverage: 1.5
+  max_net_leverage: 0.8
+  min_adv_usd: 5_000_000
+
+circuit_breakers:
+  intraday_loss_pct: 0.02
+  weekly_loss_pct: 0.05
+  monthly_loss_pct: 0.10
+
+pre_trade:
+  check_margin: true
+  check_liquidity: true
+  check_correlation: true
+  correlation_threshold: 0.85
+
+hot_reload: true
+reload_interval_seconds: 30
