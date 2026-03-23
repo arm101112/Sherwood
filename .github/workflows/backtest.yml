@@ -1,0 +1,36 @@
+name: Nightly Backtest
+
+on:
+  schedule:
+    - cron: "0 6 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt && pip install -e .
+
+      - name: Run backtest
+        run: |
+          python -m sherwood.backtester \
+            --strategy momentum \
+            --start 2020-01-01 \
+            --end 2024-12-31 \
+            --capital 1000000 \
+            --output reports/nightly.json
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: backtest-report
+          path: reports/
