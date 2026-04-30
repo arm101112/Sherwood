@@ -95,3 +95,4 @@ class Engine:
         if self._loop:
             self._loop.call_soon_threadsafe(self._loop.stop)
         log.info("engine_stopped")
+
