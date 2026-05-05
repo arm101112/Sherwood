@@ -50,3 +50,4 @@ class MomentumStrategy(Strategy):
             ))
 
         return signals
+
