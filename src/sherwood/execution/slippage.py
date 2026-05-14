@@ -19,3 +19,4 @@ class SlippageModel:
     def expected_cost(self, price: float, qty: int, adv: float | None = None) -> float:
         adj = self.adjust(price, "buy", qty, adv)
         return abs(adj - price) * qty
+
