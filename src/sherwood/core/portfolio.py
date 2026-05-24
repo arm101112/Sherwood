@@ -72,3 +72,4 @@ class Portfolio:
             pnl_today=pnl_today,
             pnl_total=self._realized_pnl,
         )
+
