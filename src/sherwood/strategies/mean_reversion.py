@@ -51,3 +51,4 @@ class MeanReversionStrategy(Strategy):
                 ))
 
         return signals
+
