@@ -37,3 +37,4 @@ class BarCache:
         if raw is None:
             return None
         return json.loads(raw)["c"]
+
