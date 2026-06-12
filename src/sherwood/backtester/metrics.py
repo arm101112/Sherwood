@@ -40,3 +40,4 @@ def compute_metrics(returns: pd.Series,
         "profit_factor": profit_factor,
         "total_trades": len(returns),
     }
+
