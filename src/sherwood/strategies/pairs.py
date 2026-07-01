@@ -73,3 +73,4 @@ class PairsStrategy(Strategy):
                 ])
 
         return signals
+
