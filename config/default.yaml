@@ -22,3 +22,9 @@ logging:
   level: INFO
   format: json
   file: logs/sherwood.log
+
+
+chain:
+  enabled: true
+  rpc: https://mainnet.robinhoodchain.io
+  chain_id: 1234
